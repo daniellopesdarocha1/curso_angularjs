@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app ng-init="valor1 = 5; valor2 = 10; pessoa = {nome : 'Daniel Rocha'}">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+	<script src="js/angular/angular.min.js"></script>
+</head>
+<body>
+
+	<h1 ng-bind="valor1 + valor2"></h1>
+	<h1 ng-bind="valor1 / valor2"></h1>
+
+	<!--
+		Pode-se utilizar o ng-bind OU as chaves duplas {{}}
+	-->
+
+	{{valor1 + valor2}} 
+
+
+	<h1>Resultado: <texto ng-bind="valor1 - valor2"></texto></h1>
+	<!--Criei a tag texto que não existe no html-->
+
+	<h1>Seja bem vindo {{pessoa.nome}}</h1>
+
+	<h1 ng-bind="pessoa.nome"></h1>
+
+	<input type="text" ng-model="pessoa.nome"></input>
+	<!--se o usuario digitar neste input, agora irá mudar em todos os lugares que possuem esta variável-->
+
+	<input type="number" ng-model="valor1"></input>
+	<input type="number" ng-model="valor2"></input>
+	<!--Para fazer cálculo o campo deve ser type="number, senão ele vai concatenar"-->
+
+
+
+</body>
+</html>
