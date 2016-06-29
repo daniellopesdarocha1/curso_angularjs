@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+</head>
+<body>
+
+
+
+	<div ng-controller="Aula10Controller">
+		<h1>Controller da aula 10</h1>
+
+		<!--
+			o angular possui filtros pré-prontos
+		exemplo: {{ 'daniel rocha' | uppercase }}
+		-->
+
+		{{ 'daniel rocha' | uppercase }}
+
+		<br/>
+
+		{{ pessoa.nome | uppercase }}
+
+		<br/>
+
+		{{  pessoa | json }}
+
+		<br/>
+
+		{{  (pessoa | json) | uppercase }}
+
+		<br/>
+
+		{{ 'daniel rocha' | retornaoi}}
+
+		<br/>
+
+		{{ pessoa.nome | retornaoi}}
+
+	</div>
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/app.module.js"></script>
+
+	<!-- controllers -->
+	<script src="js/aula10Filter.js"></script>
+	<script src="js/aula10Controller.js"></script>
+
+</body>
+</html>
