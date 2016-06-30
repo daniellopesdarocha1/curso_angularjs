@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+</head>
+<body>
+
+	<div ng-controller="Aula15Controller">
+
+		<button type="button" ng-click="carregaLivros()">Carregar livros</button>
+		<button type="button" ng-click="salvarLivro()">Salvar livro</button>
+		<button type="button" ng-click="getLivro(30)">Carregar livro: ID 30</button>
+
+	</div>
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/angular-resource.min.js"></script>
+
+	<!-- controllers -->
+	<script src="js/aula15Controller.js"></script>
+
+</body>
+</html>
