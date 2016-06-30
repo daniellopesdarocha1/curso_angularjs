@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+</head>
+<body>
+
+	<div ng-controller="Aula18Controller">
+
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+
+		<p>
+			{{ $location.protocol() }} 
+			<!--permite identificar qual protocolo a pessoa está utilizando para acessar o seu site-->
+		</p>
+
+		<p>{{ $location.host() }}</p>
+
+		<p>{{ $location.port() }}</p>
+
+		<p>{{ $location.path() }}</p> <!--todo o caminho que vem depois do host-->
+
+		<p>{{ $location.search() | json }}</p>
+
+		<p>{{ $location.search().id }}</p>
+
+		<p>{{ $location.hash().id }}</p>
+
+		<a href="#" ng-click="setaId(10)">Link</a>
+		<a href="#" ng-click="setaId(11)">Link</a>
+		<a href="#" ng-click="setaId(12)">Link</a>
+		<a href="#" ng-click="setaId(13)">Link</a>
+		<a href="#" ng-click="setaId(14)">Link</a>
+		<a href="#" ng-click="setaId(15)">Link</a>
+		<a href="#" ng-click="setaId(16)">Link</a>
+		<a href="#" ng-click="setaId(17)">Link</a>
+
+	</div>
+
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/app.module.js"></script>
+	<script src="js/aula18Controller.js"></script>
+
+</body>
+</html>
