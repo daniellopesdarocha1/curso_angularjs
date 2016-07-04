@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="js/angular/select.min.css">
+	<style>
+
+	</style>
+</head>
+<body>
+
+	<div ng-controller="Aula25Controller">
+
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+
+					<h1>ui.select</h1>
+
+					<ui-select ng-model="paisselecionado.selected" theme="bootstrap" reset-search-input="false">
+					
+						<ui-select-match placeholder="Digite o nome de um país">
+						<!--objeto que sera utilizado para fazer a pesquisa no select-->
+
+							{{ paisselecionado.selected.name }}
+
+						</ui-select-match>
+
+						<ui-select-choices repeat="pais in paises | filter : $select.search"><!--dentro do componente não vai funcionar uma diretiva do angular exemplo ng-repeat apenas repeat-->
+
+							{{ pais.name }} / {{ pais.code }}
+
+						</ui-select-choices>
+
+				</ui-select>
+
+				<!--<h3>Você selecionou {{ paisselecionado.selected | json }}</h3>-->
+				<!--<h3>Você selecionou {{ paisselecionado.selected.name | json }}</h3>-->
+				<h3>Você selecionou {{ paisselecionado.selected.name }}</h3>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/select.min.js"></script>
+	<script src="js/aula25Controller.js"></script>
+
+</body>
+</html>
