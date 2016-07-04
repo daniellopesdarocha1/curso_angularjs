@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Curso AngularJS</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<style>
+
+	</style>
+</head>
+<body>
+
+	<div ng-controller="Aula26Controller">
+
+		<div class="containner">
+			<div class="row">
+				<div class="col-xs-12">
+					
+					<h1>Accordion</h1>
+
+					<input type="text" ng-model="accor.heading">
+					<input type="text" ng-model="accor.content">
+					<button type="button" ng-click="addAccordion()">Add</button>
+
+					<hr/>
+
+					<accordion>
+
+						<accordion-group heading="Titulo do accordion 1">
+							<p>Conteúdo do nosso accordion</p>
+						</accordion-group>
+
+						<accordion-group heading="Titulo do accordion 2">
+							<p>Conteúdo do outro accordion</p>
+						</accordion-group>
+
+						<accordion-group ng-repeat="g in grupos" heading="{{ g.heading }}">
+
+							<div class="alert alert-success">
+								{{ g.content }}
+							</div>
+						</accordion-group>
+
+					</accordion>
+
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+	<script src="js/angular/angular.min.js"></script>
+	<script src="js/angular/ui-bootstrap-tpls-0.13.0.min.js"></script>
+	<script src="js/aula26Controller.js"></script>
+
+</body>
+</html>
